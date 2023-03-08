@@ -1,0 +1,28 @@
+package com.craftEmployee.service.RepoServeice;
+
+import com.craftEmployee.service.Repo.EmployeeRepo;
+import com.craftEmployee.service.model.Employee;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class EmployeeService {
+
+	
+	@Autowired
+	EmployeeRepo employeeRepo;
+	
+	//save employee
+	
+	public Employee saveEmployee(Employee employee) {
+		
+		
+		return employeeRepo.save(employee);
+	}
+	
+	// get department details  form department service
+	
+	
+	
+}

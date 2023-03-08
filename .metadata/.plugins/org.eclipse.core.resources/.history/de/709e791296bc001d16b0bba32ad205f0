@@ -1,0 +1,5 @@
+package com.craftDepartment.service.RepoService;
+
+public class DepartmentService {
+
+}

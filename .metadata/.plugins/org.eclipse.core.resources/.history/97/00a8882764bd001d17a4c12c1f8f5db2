@@ -1,0 +1,34 @@
+server:
+  port: 9191
+  
+ 
+spring:
+  application:
+    name: api-gatway-service  
+    
+
+  cloud:
+    gateway:
+      routes:
+      - id: EMPLOYEE-SERVICE
+        uri:
+          lb://employee-service
+        predicates:
+        - Path=/users/**
+             
+      - id: DEPARTMENT-SERVICE
+        uri:
+          lb://department-service 
+        predicates:
+        - Path=/departments/**
+        
+
+    
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost     

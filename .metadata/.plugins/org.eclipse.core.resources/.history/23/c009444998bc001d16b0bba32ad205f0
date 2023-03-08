@@ -1,0 +1,5 @@
+package com.craftEmployee.service.model;
+
+public class Employee {
+
+}

@@ -1,0 +1,5 @@
+package com.craftDepartment.service.Model;
+
+public class Department {
+
+}
